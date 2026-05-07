@@ -21,7 +21,7 @@ export default function Hero() {
       >
         <div className="w-full h-full relative z-0 grayscale contrast-125 opacity-40 mix-blend-screen scale-x-[-1]">
           <img 
-            src="/images/martini.png" 
+            src="/martini.png" 
             alt="moody portrait"
             className="w-full h-full object-cover object-center"
           />
