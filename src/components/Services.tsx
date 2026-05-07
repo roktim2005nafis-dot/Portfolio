@@ -21,7 +21,7 @@ const expertises = [
 
 export default function Services() {
   return (
-    <section className="py-24 md:py-48 w-full bg-transparent text-[#F5F5F5] border-t border-[#222] relative overflow-hidden" id="expertise">
+    <section className="py-24 md:py-48 w-full bg-transparent text-[#ededed] border-t border-neutral-800 relative overflow-hidden" id="expertise">
       
       {/* Background typographic element */}
       <div className="absolute top-0 right-0 opacity-5 pointer-events-none -translate-y-1/4 translate-x-1/4">

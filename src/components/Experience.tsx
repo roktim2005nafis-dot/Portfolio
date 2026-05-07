@@ -23,7 +23,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-24 md:py-48 w-full bg-transparent text-[#F5F5F5] relative border-t border-[#222]">
+    <section className="py-24 md:py-48 w-full bg-transparent text-[#ededed] relative border-t border-neutral-800">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         
         <div className="mb-24 flex items-center justify-between">

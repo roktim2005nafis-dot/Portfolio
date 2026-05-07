@@ -30,7 +30,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-24 md:py-48 w-full bg-transparent text-[#F5F5F5] border-t border-[#222] relative overflow-hidden">
+    <section className="py-24 md:py-48 w-full bg-transparent text-[#ededed] border-t border-neutral-800 relative overflow-hidden">
       {/* Background Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] h-[500px] blur-[100px] bg-red-900/10 pointer-events-none rounded-full" />
       

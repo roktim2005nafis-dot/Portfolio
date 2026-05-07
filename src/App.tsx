@@ -20,7 +20,7 @@ export default function App() {
   if (!isLoaded) return null;
 
   return (
-    <div className="bg-[#050505] min-h-screen text-[#F5F5F5] font-sans selection:bg-white selection:text-black relative border-x border-[#222]">
+    <div className="bg-[#0a0a0a] min-h-screen text-[#ededed] font-sans selection:bg-white selection:text-black relative border-x border-neutral-900">
       <CustomCursor />
       <Header />
       

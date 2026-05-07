@@ -40,15 +40,15 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center gap-4 mb-20">
           <span className="font-sans text-xs tracking-[0.3em] uppercase text-neutral-500">Selected Work</span>
-          <div className="flex-1 h-[1px] bg-[#222]" />
+          <div className="flex-1 h-[1px] bg-neutral-800" />
         </div>
 
-        <div className="relative w-full border-t border-[#222] flex flex-col" onMouseLeave={() => setHoveredProject(null)}>
+        <div className="relative w-full border-t border-neutral-800 flex flex-col" onMouseLeave={() => setHoveredProject(null)}>
           {projects.map((project, index) => (
             <motion.a
               href={`#project-${project.id}`}
               key={project.id}
-              className="group relative w-full border-b border-[#222] py-10 flex flex-col md:flex-row md:items-center justify-between cursor-pointer"
+              className="group relative w-full border-b border-neutral-800 py-10 flex flex-col md:flex-row md:items-center justify-between cursor-pointer"
               onMouseEnter={() => setHoveredProject(index)}
               data-cursor="hover"
             >

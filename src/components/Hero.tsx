@@ -65,8 +65,8 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-6 mt-8">
-            <button className="px-8 py-4 bg-[#F5F5F5] text-[#050505] text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-white transition-colors" data-cursor="hover">Start a Project</button>
-            <button className="px-8 py-4 border border-white/20 text-[#F5F5F5] text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm backdrop-blur-sm hover:bg-white/5 transition-colors" data-cursor="hover">View Showreel</button>
+            <button className="px-8 py-4 bg-[#ededed] text-[#0a0a0a] text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-white transition-colors" data-cursor="hover">Start a Project</button>
+            <button className="px-8 py-4 border border-white/20 text-[#ededed] text-[11px] font-bold uppercase tracking-[0.2em] rounded-sm backdrop-blur-sm hover:bg-white/5 transition-colors" data-cursor="hover">View Showreel</button>
           </div>
         </motion.div>
       </div>

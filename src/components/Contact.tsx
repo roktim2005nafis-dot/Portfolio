@@ -41,7 +41,7 @@ export default function Contact() {
                 name="name"
                 required
                 placeholder="YOUR NAME" 
-                className="w-full bg-transparent border-b border-[#222] py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-700" 
+                className="w-full bg-transparent border-b border-neutral-800 py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
               />
             </div>
             <div className="relative group">
@@ -50,7 +50,7 @@ export default function Contact() {
                 name="email"
                 required
                 placeholder="YOUR EMAIL" 
-                className="w-full bg-transparent border-b border-[#222] py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-700" 
+                className="w-full bg-transparent border-b border-neutral-800 py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
               />
             </div>
             <div className="relative group">
@@ -59,7 +59,7 @@ export default function Contact() {
                 required
                 placeholder="PROJECT DETAILS" 
                 rows={4}
-                className="w-full bg-transparent border-b border-[#222] py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-700" 
+                className="w-full bg-transparent border-b border-neutral-800 py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-500" 
               />
             </div>
             
@@ -77,13 +77,13 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <footer className="w-full border-t border-[#222] py-8 px-6 md:px-12 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-transparent mt-24">
+      <footer className="w-full border-t border-neutral-800 py-8 px-6 md:px-12 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-transparent mt-24">
         <div className="flex flex-col gap-2">
-          <p className="font-sans text-xs tracking-widest uppercase text-neutral-600 text-center md:text-left">
+          <p className="font-sans text-xs tracking-widest uppercase text-neutral-400 text-center md:text-left">
             © {new Date().getFullYear()} Nafis Ahmed Roktim. All Rights Reserved.
           </p>
-          <p className="font-sans text-xs tracking-widest text-neutral-600 text-center md:text-left">
-            Site created by <a href="http://afrainkabirrafid.ami.bd" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-neutral-500 font-medium">Afrain Kabir Rafid</a> (Founder - Rubiecorp)
+          <p className="font-sans text-xs tracking-widest text-neutral-400 text-center md:text-left">
+            Site created by <a href="http://afrainkabirrafid.ami.bd" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-neutral-300 font-medium">Afrain Kabir Rafid</a> (Founder - Rubiecorp)
           </p>
         </div>
         <div className="flex items-center gap-6 mt-4 md:mt-0">
