@@ -34,10 +34,12 @@ export default function Contact() {
            viewport={{ once: true }}
            className="w-full max-w-md mx-auto"
         >
-          <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col gap-8" action="https://formspree.io/f/mgodzprl" method="POST">
             <div className="relative group">
               <input 
                 type="text" 
+                name="name"
+                required
                 placeholder="YOUR NAME" 
                 className="w-full bg-transparent border-b border-[#222] py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-700" 
               />
@@ -45,12 +47,16 @@ export default function Contact() {
             <div className="relative group">
               <input 
                 type="email" 
+                name="email"
+                required
                 placeholder="YOUR EMAIL" 
                 className="w-full bg-transparent border-b border-[#222] py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-700" 
               />
             </div>
             <div className="relative group">
               <textarea 
+                name="message"
+                required
                 placeholder="PROJECT DETAILS" 
                 rows={4}
                 className="w-full bg-transparent border-b border-[#222] py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-700" 
@@ -58,6 +64,7 @@ export default function Contact() {
             </div>
             
             <button 
+              type="submit"
               className="mt-8 relative overflow-hidden group border border-white/20 py-4 px-8 w-full uppercase tracking-widest font-sans text-sm"
               data-cursor="hover"
             >
