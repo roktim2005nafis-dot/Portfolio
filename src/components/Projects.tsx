@@ -28,7 +28,7 @@ const projects = [
     title: 'Echoes Framework',
     category: 'UI/UX & Illustration',
     year: '2024',
-    image: '/my-time-has-come.png',
+    image: '/my-time-has-come.jpg',
   },
 ];
 

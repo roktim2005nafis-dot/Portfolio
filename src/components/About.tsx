@@ -23,7 +23,7 @@ export default function About() {
               className="absolute inset-0 w-full h-[120%] -top-[10%]"
             >
               <img 
-                src="/my-time-has-come.png" 
+                src="/my-time-has-come.jpg" 
                 alt="Portrait"
                 className="w-full h-full object-cover object-center grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105"
               />
