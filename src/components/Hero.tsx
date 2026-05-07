@@ -49,7 +49,7 @@ export default function Hero() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white/10">Roktim.</span>
           </h1>
           
-          <h2 className="font-display font-medium text-[6vw] md:text-[4vw] leading-none tracking-tight text-neutral-400 mt-2 md:mt-4 uppercase">
+          <h2 className="font-display font-medium text-[6vw] md:text-[4vw] leading-none tracking-tight text-neutral-400 mt-6 md:mt-10 uppercase">
             Visual Identity Specialist
           </h2>
         </motion.div>
