@@ -7,28 +7,28 @@ const projects = [
     title: 'Void Identity',
     category: 'Brand Identity',
     year: '2023',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/selfie-suit.png',
   },
   {
     id: 2,
     title: 'Aura Digital',
     category: 'Web Layout Design',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/profile-suit-left.png',
   },
   {
     id: 3,
     title: 'Noir Fashion',
     category: 'Rebranding & Stationary',
     year: '2023',
-    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/martini.png',
   },
   {
     id: 4,
     title: 'Echoes Framework',
     category: 'UI/UX & Illustration',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1000&auto=format&fit=crop',
+    image: '/images/my-time-has-come.png',
   },
 ];
 

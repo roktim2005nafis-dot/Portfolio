@@ -14,17 +14,6 @@ export default function Hero() {
 
   return (
     <section ref={containerRef} className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-transparent">
-      {/* Background Noise/Texture */}
-      <div 
-        className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?q=80&w=2000&auto=format&fit=crop")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          mixBlendMode: 'overlay',
-        }}
-      />
-      
       {/* Abstract Background Element */}
       <motion.div 
         style={{ y: y1, opacity }}
@@ -32,7 +21,7 @@ export default function Hero() {
       >
         <div className="w-full h-full relative z-0 grayscale contrast-125 opacity-40 mix-blend-screen scale-x-[-1]">
           <img 
-            src="https://images.unsplash.com/photo-1536640712-4d4c36ef0e52?q=80&w=1000&auto=format&fit=crop" 
+            src="/images/martini.png" 
             alt="moody portrait"
             className="w-full h-full object-cover object-center"
           />

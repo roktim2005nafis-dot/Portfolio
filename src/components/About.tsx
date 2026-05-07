@@ -23,35 +23,12 @@ export default function About() {
               className="absolute inset-0 w-full h-[120%] -top-[10%]"
             >
               <img 
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop" 
+                src="/images/my-time-has-come.png" 
                 alt="Portrait"
                 className="w-full h-full object-cover object-center grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
             </motion.div>
-            
-            {/* Red accent overlay text simulating the user's uploaded image style */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none z-10 p-8">
-               <motion.span 
-                 initial={{ opacity: 0, scale: 0.9 }}
-                 whileInView={{ opacity: 0.8, scale: 1 }}
-                 transition={{ duration: 1 }}
-                 viewport={{ once: true }}
-                 className="font-display font-bold text-red-600 tracking-tighter text-4xl md:text-6xl text-center leading-none mixed-blend-difference"
-               >
-                 MY TIME HAS<br/>COME
-               </motion.span>
-               <motion.div 
-                 initial={{ opacity: 0 }}
-                 whileInView={{ opacity: 0.5 }}
-                 transition={{ delay: 0.5, duration: 1 }}
-                 viewport={{ once: true }}
-                 className="mt-4 text-xs font-sans tracking-[0.2em] uppercase text-white/50 w-full flex justify-between"
-               >
-                 <span>You have to face it</span>
-                 <span>Create by Roktim</span>
-               </motion.div>
-            </div>
           </div>
 
           {/* Text Column */}
