@@ -17,7 +17,7 @@ const experiences = [
     role: 'Higher Secondary Certificate',
     company: 'Advance Residential Model Collage',
     period: 'Passed 2024',
-    description: 'Graduated with a GPA of 4.89 out of 5.00, demonstrating strong academic foundation and discipline.'
+    description: 'Graduated with a GPA of 4.33 out of 5.00, demonstrating strong academic foundation and discipline.'
   }
 ];
 
