@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-background: #050505;
+  --color-foreground: #F5F5F5;
+  --color-primary: #f0f0f0;
+  --color-muted: #666666;
+  --color-accent: #ff3333;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 2%;
+    --foreground: 0 0% 96%;
+  }
+
+  body {
+    @apply bg-[#050505] text-[#F5F5F5] font-sans antialiased overflow-x-hidden selection:bg-white selection:text-black;
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+.text-stroke:hover {
+  color: white;
+  -webkit-text-stroke: 1px transparent;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+.mixed-blend-difference {
+  mix-blend-mode: difference;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}

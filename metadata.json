@@ -1,0 +1,10 @@
+{
+  "name": "Nafis Ahmed Roktim - Portfolio",
+  "description": "A cinematic, premium, interactive portfolio website for a creative designer/developer. Built with brutalist minimalism, fluid motion, and high-end visual storytelling.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}
