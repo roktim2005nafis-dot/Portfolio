@@ -37,7 +37,7 @@ export default function About() {
           <motion.div style={{ y: textY }} className="flex flex-col justify-center relative z-10">
             <div className="flex items-center gap-4 mb-8">
               <div className="w-12 h-[1px] bg-red-500" />
-              <span className="font-sans text-xs tracking-[0.3em] uppercase text-red-500">The Architect</span>
+              <span className="font-sans text-xs tracking-[0.3em] uppercase text-red-500">The Visual Artist</span>
             </div>
 
             <h2 className="font-display font-light text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8 text-white uppercase tracking-tight">
@@ -47,13 +47,13 @@ export default function About() {
 
             <div className="font-sans text-neutral-400 space-y-6 text-sm md:text-base leading-relaxed max-w-lg">
               <p>
-                I am Nafis Ahmed Roktim, a highly motivated and detail-oriented creative professional. I don't just design interfaces; I sculpt cinematic digital experiences.
+                I am Nafis Ahmed Roktim, a highly motivated and detail-oriented creative professional. I don't just create graphics; I sculpt cinematic visual identities.
               </p>
               <p>
                 My philosophy merges brutalist minimalism with high-end luxury aesthetics. Every pixel is intentional, every motion is purposeful, and every layout tells a compelling story.
               </p>
               <p>
-                Specializing in Brand Identity, Flat & Line Art Illustration, and Web Layout Design, my work transcends traditional boundaries to forge profound emotional connections between brands and their audiences.
+                Specializing in Brand Identity, Flat & Line Art Illustration, and Editorial Design, my work transcends traditional boundaries to forge profound emotional connections between brands and their audiences.
               </p>
             </div>
 

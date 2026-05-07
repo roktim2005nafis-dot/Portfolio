@@ -13,7 +13,7 @@ const testimonials = [
     role: "Founder, AURA DIGITAL"
   },
   {
-    quote: "A true visionary in digital layout and art direction. Roktim's work is the intersection of art and digital engineering.",
+    quote: "A true visionary in graphic design and art direction. Roktim's work is the intersection of art and visual artistry.",
     author: "Sarah V.",
     role: "Marketing Lead, NOIR"
   }

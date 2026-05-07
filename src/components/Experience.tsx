@@ -2,16 +2,16 @@ import { motion } from 'motion/react';
 
 const experiences = [
   {
-    role: 'Independent Art Director',
+    role: 'Independent Graphic Designer',
     company: 'Freelance & Contracting',
     period: '2022 — Present',
-    description: 'Leading end-to-end brand identity projects, editorial layouts, and digital experiences for boutique luxury brands and modern tech startups.'
+    description: 'Leading end-to-end brand identity projects, editorial layouts, and visual experiences for boutique luxury brands and modern tech startups.'
   },
   {
     role: 'B.Sc. Professional (Honours)',
     company: 'National University',
     period: 'Current',
-    description: 'Pursuing higher education while continuously refining technical and creative capabilities in digital art and web layout design.'
+    description: 'Pursuing higher education while continuously refining technical and creative capabilities in digital art and graphic design.'
   },
   {
     role: 'Higher Secondary Certificate',

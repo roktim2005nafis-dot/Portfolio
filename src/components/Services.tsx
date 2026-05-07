@@ -6,12 +6,12 @@ const expertises = [
     items: ['Logo Design', 'Rebranding & Brand Refresh', 'Letterhead & Stationery', 'Business Cards']
   },
   {
-    title: 'Digital & Web Layout',
-    items: ['Website Layout Design', 'Figma Prototyping', 'Web Analytics', 'Digital Assets']
+    title: 'Print & Publication',
+    items: ['Editorial Layouts', 'Poster & Flyer Design', 'Packaging Design', 'Print-Ready Assets']
   },
   {
     title: 'Visual Arts',
-    items: ['Graphic Design', 'Flat & Line Art Illustration', 'Social Media Thumbnails (FB, IG, YT)', 'Editorial Layouts']
+    items: ['Graphic Design', 'Flat & Line Art Illustration', 'Social Media Thumbnails (FB, IG, YT)', 'Custom Vectors']
   },
   {
     title: 'Tool Stack',

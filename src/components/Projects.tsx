@@ -12,7 +12,7 @@ const projects = [
   {
     id: 2,
     title: 'Aura Digital',
-    category: 'Web Layout Design',
+    category: 'Print & Editorial Design',
     year: '2024',
     image: '/profile-suit-left.jpg',
   },
@@ -26,7 +26,7 @@ const projects = [
   {
     id: 4,
     title: 'Echoes Framework',
-    category: 'UI/UX & Illustration',
+    category: 'Packaging & Illustration',
     year: '2024',
     image: '/my-time-has-come.jpg',
   },

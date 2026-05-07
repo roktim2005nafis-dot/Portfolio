@@ -41,7 +41,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-[12px] uppercase tracking-[0.3em] text-[#888] mb-2"
           >
-            Creative Director & Designer
+            Graphic Designer
           </motion.span>
           
           <h1 className="font-display font-bold text-[12vw] md:text-[8vw] leading-[0.85] tracking-tight uppercase text-white">
@@ -50,7 +50,7 @@ export default function Hero() {
           </h1>
           
           <h2 className="font-display font-medium text-[6vw] md:text-[4vw] leading-none tracking-tight text-neutral-400 mt-2 md:mt-4 uppercase">
-            Web Layout Specialist
+            Visual Identity Specialist
           </h2>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
           className="mt-12 md:mt-24 max-w-md"
         >
           <p className="font-sans text-white/50 text-base md:text-lg leading-relaxed font-light">
-            Crafting immersive digital experiences that live at the intersection of cinematic storytelling and advanced creative engineering.
+            Crafting striking visual identities that live at the intersection of cinematic storytelling and bold graphic design.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-6 mt-8">
