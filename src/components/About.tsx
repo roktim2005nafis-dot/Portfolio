@@ -25,6 +25,8 @@ export default function About() {
               <img 
                 src="/my-time-has-come.jpg" 
                 alt="Portrait"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-center grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />

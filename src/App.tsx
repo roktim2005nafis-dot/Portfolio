@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Projects from './components/Projects';
-import Services from './components/Services';
-import Experience from './components/Experience';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
+
+const Projects = lazy(() => import('./components/Projects'));
+const Services = lazy(() => import('./components/Services'));
+const Experience = lazy(() => import('./components/Experience'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Contact = lazy(() => import('./components/Contact'));
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -34,11 +35,13 @@ export default function App() {
       <main className="relative z-10 w-full overflow-hidden">
         <Hero />
         <About />
-        <Projects />
-        <Services />
-        <Experience />
-        <Testimonials />
-        <Contact />
+        <Suspense fallback={<div className="h-20" />}>
+          <Projects />
+          <Services />
+          <Experience />
+          <Testimonials />
+          <Contact />
+        </Suspense>
       </main>
     </div>
   );
