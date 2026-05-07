@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nafisahmedroktim.bro.bd/sitemap.xml
+
+# Optional crawl delay for aggressive bots
+Crawl-delay: 1
+
+# Block common unnecessary system paths
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important assets
+Allow: /assets/
