@@ -3,6 +3,7 @@ import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Preloader from './components/Preloader';
 
 const Services = lazy(() => import('./components/Services'));
 const Experience = lazy(() => import('./components/Experience'));
@@ -20,6 +21,7 @@ export default function App() {
 
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-[#ededed] font-sans selection:bg-white selection:text-black relative border-x border-neutral-900">
+      <Preloader />
       <CustomCursor />
       <Header />
       
