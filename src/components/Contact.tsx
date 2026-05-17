@@ -87,14 +87,20 @@ export default function Contact() {
           </p>
         </div>
         <div className="flex items-center gap-6 mt-4 md:mt-0">
-          {['LinkedIn', 'Instagram', 'Behance'].map((social) => (
+          {[
+            { name: 'LinkedIn', url: '#' },
+            { name: 'Instagram', url: 'https://www.instagram.com/_drag._.on._/' },
+            { name: 'YouTube', url: 'https://www.youtube.com/@its-roktim-yoo' }
+          ].map((social) => (
             <a 
-              key={social} 
-              href="#" 
+              key={social.name} 
+              href={social.url} 
+              target={social.url !== '#' ? "_blank" : undefined}
+              rel={social.url !== '#' ? "noopener noreferrer" : undefined}
               className="font-sans text-xs tracking-widest text-neutral-400 hover:text-white transition-colors uppercase"
               data-cursor="hover"
             >
-              {social}
+              {social.name}
             </a>
           ))}
         </div>
