@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 
-const Projects = lazy(() => import('./components/Projects'));
 const Services = lazy(() => import('./components/Services'));
 const Experience = lazy(() => import('./components/Experience'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
@@ -36,7 +35,6 @@ export default function App() {
         <Hero />
         <About />
         <Suspense fallback={<div className="h-20" />}>
-          <Projects />
           <Services />
           <Experience />
           <Testimonials />
