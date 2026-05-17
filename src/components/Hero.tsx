@@ -44,9 +44,9 @@ export default function Hero() {
             Graphic Designer
           </motion.span>
           
-          <h1 className="font-display font-bold text-[12vw] md:text-[8vw] leading-[0.85] tracking-tight uppercase text-white">
-            Nafis <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white/10">Roktim.</span>
+          <h1 className="font-display font-bold text-[13vw] md:text-[7vw] xl:text-[7.5vw] leading-[0.85] tracking-tight uppercase text-white whitespace-nowrap">
+            NAFIS <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/40 to-white/10">AHMED ROKTIM</span>
           </h1>
           
           <h2 className="font-display font-medium text-[6vw] md:text-[4vw] leading-none tracking-tight text-neutral-400 mt-6 md:mt-10 uppercase">
