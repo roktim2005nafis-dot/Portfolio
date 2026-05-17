@@ -23,7 +23,7 @@ export default function Contact() {
             Open for opportunities
           </span>
           <h2 className="font-display font-bold text-5xl md:text-8xl xl:text-9xl tracking-tighter uppercase leading-[0.9]">
-            Let's build <br/><span className="italic text-transparent text-stroke">The Future</span>
+            Let's build <br/><span className="italic animate-color-blink">The Future</span>
           </h2>
         </motion.div>
 

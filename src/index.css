@@ -62,3 +62,18 @@
     cursor: none;
   }
 }
+
+@keyframes colorBlink {
+  0%, 100% {
+    color: #0a0a0a;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    color: #ededed;
+    -webkit-text-stroke: 1px transparent;
+  }
+}
+
+.animate-color-blink {
+  animation: colorBlink 2s ease-in-out infinite;
+}
