@@ -41,7 +41,7 @@ export default function Contact() {
                 name="name"
                 required
                 placeholder="YOUR NAME" 
-                className="w-full bg-transparent border-b border-neutral-800 py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
+                className="w-full bg-transparent border-b border-neutral-300 py-4 font-sans text-sm focus:outline-none focus:border-black transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
               />
             </div>
             <div className="relative group">
@@ -50,7 +50,7 @@ export default function Contact() {
                 name="email"
                 required
                 placeholder="YOUR EMAIL" 
-                className="w-full bg-transparent border-b border-neutral-800 py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
+                className="w-full bg-transparent border-b border-neutral-300 py-4 font-sans text-sm focus:outline-none focus:border-black transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
               />
             </div>
             <div className="relative group">
@@ -59,16 +59,16 @@ export default function Contact() {
                 required
                 placeholder="PROJECT DETAILS" 
                 rows={4}
-                className="w-full bg-transparent border-b border-neutral-800 py-4 font-sans text-sm focus:outline-none focus:border-white transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-500" 
+                className="w-full bg-transparent border-b border-neutral-300 py-4 font-sans text-sm focus:outline-none focus:border-black transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-500" 
               />
             </div>
             
             <button 
               type="submit"
-              className="mt-8 relative overflow-hidden group border border-white/20 py-4 px-8 w-full uppercase tracking-widest font-sans text-sm"
+              className="mt-8 relative overflow-hidden group border border-black/20 py-4 px-8 w-full uppercase tracking-widest font-sans text-sm"
               data-cursor="hover"
             >
-              <div className="absolute inset-0 bg-white translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
+              <div className="absolute inset-0 bg-black translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
               <span className="relative z-10 group-hover:text-black transition-colors duration-500 font-bold">
                 Send Transmission
               </span>
@@ -77,13 +77,13 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <footer className="w-full border-t border-neutral-800 py-8 px-6 md:px-12 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-transparent mt-24">
+      <footer className="w-full border-t border-neutral-300 py-8 px-6 md:px-12 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-transparent mt-24">
         <div className="flex flex-col gap-2">
-          <p className="font-sans text-xs tracking-widest uppercase text-neutral-400 text-center md:text-left">
+          <p className="font-sans text-xs tracking-widest uppercase text-neutral-600 text-center md:text-left">
             © {new Date().getFullYear()} Nafis Ahmed Roktim. All Rights Reserved.
           </p>
-          <p className="font-sans text-xs tracking-widest text-neutral-400 text-center md:text-left">
-            Site created by <a href="http://afrainkabirrafid.ami.bd" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-neutral-300 font-medium">Afrain Kabir Rafid</a> (Founder - Rubiecorp)
+          <p className="font-sans text-xs tracking-widest text-neutral-600 text-center md:text-left">
+            Site created by <a href="http://afrainkabirrafid.ami.bd" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors text-neutral-500 font-medium">Afrain Kabir Rafid</a> (Founder - Rubiecorp)
           </p>
         </div>
         <div className="flex items-center gap-6 mt-4 md:mt-0">
@@ -97,7 +97,7 @@ export default function Contact() {
               href={social.url} 
               target={social.url !== '#' ? "_blank" : undefined}
               rel={social.url !== '#' ? "noopener noreferrer" : undefined}
-              className="font-sans text-xs tracking-widest text-neutral-400 hover:text-white transition-colors uppercase"
+              className="font-sans text-xs tracking-widest text-neutral-600 hover:text-black transition-colors uppercase"
               data-cursor="hover"
             >
               {social.name}

@@ -40,12 +40,12 @@ export default function About() {
               <span className="font-sans text-xs tracking-[0.3em] uppercase text-red-500">The Visual Artist</span>
             </div>
 
-            <h2 className="font-display font-light text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8 text-white uppercase tracking-tight">
+            <h2 className="font-display font-light text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8 text-black uppercase tracking-tight">
               Designing <span className="font-bold italic">Intentional</span> <br/>
               Futures.
             </h2>
 
-            <div className="font-sans text-neutral-400 space-y-6 text-sm md:text-base leading-relaxed max-w-lg">
+            <div className="font-sans text-neutral-600 space-y-6 text-sm md:text-base leading-relaxed max-w-lg">
               <p>
                 I am Nafis Ahmed Roktim, a highly motivated and detail-oriented creative professional. I don't just create graphics; I sculpt cinematic visual identities.
               </p>
@@ -60,7 +60,7 @@ export default function About() {
             <div className="mt-12 flex items-center gap-6">
               <a href="#contact" className="group relative inline-flex items-center gap-3 overflow-hidden cursor-pointer" data-cursor="hover">
                 <span className="font-display uppercase tracking-widest text-sm font-semibold relative z-10">Discover More</span>
-                <span className="w-10 h-[1px] bg-white transition-all duration-300 group-hover:w-16 group-hover:bg-red-500" />
+                <span className="w-10 h-[1px] bg-black transition-all duration-300 group-hover:w-16 group-hover:bg-red-500" />
               </a>
             </div>
           </motion.div>

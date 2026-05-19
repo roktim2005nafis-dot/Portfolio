@@ -23,7 +23,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section className="py-24 md:py-48 w-full bg-transparent text-[#ededed] relative border-t border-neutral-800">
+    <section className="py-24 md:py-48 w-full bg-transparent text-[#111111] relative border-t border-neutral-300">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         
         <div className="mb-24 flex items-center justify-between">
@@ -65,7 +65,7 @@ export default function Experience() {
                   <h4 className="font-sans text-red-500 text-sm tracking-widest uppercase mb-4">
                     {exp.company}
                   </h4>
-                  <p className="font-sans text-neutral-400 text-sm md:text-base leading-relaxed max-w-xl">
+                  <p className="font-sans text-neutral-600 text-sm md:text-base leading-relaxed max-w-xl">
                     {exp.description}
                   </p>
                 </div>
