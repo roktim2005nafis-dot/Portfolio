@@ -3,6 +3,7 @@ import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import CinematicGrid from './components/CinematicGrid';
 
 const Services = lazy(() => import('./components/Services'));
 const Experience = lazy(() => import('./components/Experience'));
@@ -34,6 +35,7 @@ export default function App() {
       <main className="relative z-10 w-full overflow-hidden">
         <Hero />
         <About />
+        <CinematicGrid />
         <Suspense fallback={<div className="h-20" />}>
           <Services />
           <Experience />
