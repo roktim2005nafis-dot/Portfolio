@@ -3,15 +3,15 @@ import { motion, useSpring, useMotionValue, useTransform } from 'motion/react';
 import { HoverTile } from './HoverTile';
 
 const IMAGES = [
-  '/screenshot_0.png',
-  '/screenshot_1.png',
-  '/screenshot_2.png',
-  '/screenshot_3.png',
-  '/screenshot_4.png',
-  '/screenshot_5.png',
-  '/screenshot_6.png',
+  '/screenshot_0.webp',
+  '/screenshot_1.webp',
+  '/screenshot_2.webp',
+  '/screenshot_3.webp',
+  '/screenshot_4.webp',
+  '/screenshot_5.webp',
+  '/screenshot_6.webp',
   '/screenshot_7.png',
-  '/screenshot_8.png',
+  '/my-time-has-come.jpg',
 ];
 
 export default function CinematicGrid() {
