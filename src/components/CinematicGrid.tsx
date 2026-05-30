@@ -63,8 +63,6 @@ export default function CinematicGrid() {
           style={{
             x: panX,
             y: panY,
-            rotateX: 45, // Tilted grid
-            rotateZ: -20, // Tilted orientation
             scale: 1.2, // Make sure it covers space
             transformStyle: 'preserve-3d',
             rotateX: useTransform(rotateXGlobal, (v) => v + 45), // Base rotation + dynamic

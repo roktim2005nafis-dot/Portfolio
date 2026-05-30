@@ -7,6 +7,7 @@ interface HoverTileProps {
   glowColor?: string;
   intensity?: number;
   perspective?: number;
+  key?: React.Key;
 }
 
 export function HoverTile({ 

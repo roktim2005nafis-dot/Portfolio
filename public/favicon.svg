@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <style>
+    .bg { fill: #111111; }
+    .fg { fill: #f2f2eb; stroke: #f2f2eb; }
+    .accent { fill: #e64a19; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #f2f2eb; }
+      .fg { fill: #111111; stroke: #111111; }
+    }
+  </style>
+  <rect width="128" height="128" rx="32" class="bg" />
+  <g transform="translate(24, 24)">
+    <path d="M16 16 H48 C62 16 70 24 70 38 C70 52 62 60 48 60 H16 V82" fill="none" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" class="fg" />
+    <path d="M42 60 L64 82" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" class="fg" />
+    <circle cx="48" cy="38" r="9" class="accent" />
+  </g>
+</svg>

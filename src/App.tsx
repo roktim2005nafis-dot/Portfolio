@@ -7,6 +7,7 @@ import CinematicGrid from './components/CinematicGrid';
 
 const Services = lazy(() => import('./components/Services'));
 const Experience = lazy(() => import('./components/Experience'));
+const Certificates = lazy(() => import('./components/Certificates'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
 const Contact = lazy(() => import('./components/Contact'));
 
@@ -39,6 +40,7 @@ export default function App() {
         <Suspense fallback={<div className="h-20" />}>
           <Services />
           <Experience />
+          <Certificates />
           <Testimonials />
           <Contact />
         </Suspense>

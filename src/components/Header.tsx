@@ -1,10 +1,11 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { HoverTile } from './HoverTile';
 
 export default function Header() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     return scrollY.on('change', (latest) => {
@@ -12,9 +13,18 @@ export default function Header() {
     });
   }, [scrollY]);
 
+  // Close mobile menu on hash/route change
+  useEffect(() => {
+    const handleHashChange = () => {
+      setIsMobileMenuOpen(false);
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   return (
     <motion.header 
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ${isScrolled ? 'bg-[#f2f2eb]/80 backdrop-blur-md border-b border-black/5 py-4' : 'bg-transparent py-6 md:py-10'}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMobileMenuOpen ? 'bg-[#f2f2eb]/90 backdrop-blur-md border-b border-black/5 py-4' : 'bg-transparent py-6 md:py-10'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -29,7 +39,7 @@ export default function Header() {
           </a>
 
           <nav className="hidden md:flex items-center gap-12 relative z-10">
-            {['Expertise', 'Contact'].map((item) => (
+            {['Expertise', 'Certificates', 'Contact'].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}
@@ -45,13 +55,57 @@ export default function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <button className="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none relative z-10" data-cursor="hover">
-            <div className="w-6 h-[1px] bg-black" />
-            <div className="w-4 h-[1px] bg-black ml-auto" />
-            <div className="w-6 h-[1px] bg-black" />
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden flex flex-col gap-1.5 p-2 bg-transparent border-none relative z-50 cursor-pointer" 
+            data-cursor="hover"
+          >
+            <motion.div 
+              animate={{ rotate: isMobileMenuOpen ? 45 : 0, y: isMobileMenuOpen ? 7 : 0 }}
+              className="w-6 h-[1.5px] bg-black origin-center" 
+            />
+            <motion.div 
+              animate={{ opacity: isMobileMenuOpen ? 0 : 1 }}
+              className="w-4 h-[1.5px] bg-black ml-auto" 
+            />
+            <motion.div 
+              animate={{ rotate: isMobileMenuOpen ? -45 : 0, y: isMobileMenuOpen ? -7 : 0 }}
+              className="w-6 h-[1.5px] bg-black origin-center" 
+            />
           </button>
         </div>
       </HoverTile>
+
+      {/* Mobile Menu Dropdown overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-full left-0 w-full bg-[#f2f2eb] border-b border-black/10 flex flex-col py-8 px-6 md:hidden z-40 space-y-6"
+          >
+            {[
+              { name: 'Expertise', href: '#expertise' },
+              { name: 'Certificates', href: '#certificates' },
+              { name: 'Contact', href: '#contact' },
+            ].map((item) => (
+              <a 
+                key={item.name} 
+                href={item.href}
+                className={`text-sm uppercase tracking-[0.2em] transition-colors py-2 border-b border-neutral-300 ${
+                  (window.location.hash === item.href) 
+                    ? 'text-red-500 font-semibold' 
+                    : 'text-neutral-700'
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
