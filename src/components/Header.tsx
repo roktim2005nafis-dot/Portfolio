@@ -24,33 +24,39 @@ export default function Header() {
 
   return (
     <motion.header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMobileMenuOpen ? 'bg-[#f2f2eb]/90 backdrop-blur-md border-b border-black/5 py-4' : 'bg-transparent py-6 md:py-10'}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled || isMobileMenuOpen ? 'bg-[#0D0D0F]/90 backdrop-blur-md border-b border-[#2A2A35] py-4' : 'bg-transparent py-6 md:py-10'}`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <HoverTile intensity={3} glowColor="rgba(0,0,0,0.05)" className="max-w-7xl mx-auto px-6 md:px-12 h-full">
+      <HoverTile intensity={3} glowColor="rgba(123,97,255,0.08)" className="max-w-7xl mx-auto px-6 md:px-12 h-full">
         <div className="flex justify-between items-center w-full h-full py-2">
           <a href="#" className="flex flex-col group relative z-10" data-cursor="hover">
-            <span className="text-[10px] tracking-[0.4em] uppercase font-bold text-black/40 mb-1">Portfolio / {new Date().getFullYear()}</span>
-            <span className="font-display font-light text-xl tracking-tighter text-[#111111] uppercase">
-              R<span className="text-red-500 font-bold">O</span>KTIM
+            <span className="text-[10px] tracking-[0.4em] uppercase font-bold text-[#8C8A99]/50 mb-1">Portfolio / {new Date().getFullYear()}</span>
+            <span className="font-display font-light text-xl tracking-tighter text-[#F0EEF8] uppercase">
+              R<span className="text-[#7B61FF] font-semibold">O</span>KTIM
             </span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-12 relative z-10">
-            {['Expertise', 'Certificates', 'Contact'].map((item) => (
+          <nav className="hidden md:flex items-center gap-10 relative z-10">
+            {[
+              { name: 'About', href: '#about' },
+              { name: 'Demo Projects', href: '#projects' },
+              { name: 'Expertise', href: '#expertise' },
+              { name: 'Certificates', href: '#certificates' },
+              { name: 'Contact', href: '#contact' }
+            ].map((item) => (
               <a 
-                key={item} 
-                href={`#${item.toLowerCase()}`}
-                className="text-[11px] uppercase tracking-[0.2em] text-neutral-600 hover:text-[#111111] transition-colors"
+                key={item.name} 
+                href={item.href}
+                className="text-[10px] uppercase tracking-[0.2em] text-[#8C8A99] hover:text-[#F0EEF8] transition-colors"
                 data-cursor="hover"
               >
-                {item}
+                {item.name}
               </a>
             ))}
-            <div className="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center">
-              <div className="w-1 h-1 bg-[#111111] rounded-full"></div>
+            <div className="w-8 h-8 rounded-full border border-[#2A2A35] flex items-center justify-center">
+              <div className="w-1 h-1 bg-[#7B61FF] rounded-full"></div>
             </div>
           </nav>
 
@@ -62,15 +68,15 @@ export default function Header() {
           >
             <motion.div 
               animate={{ rotate: isMobileMenuOpen ? 45 : 0, y: isMobileMenuOpen ? 7 : 0 }}
-              className="w-6 h-[1.5px] bg-black origin-center" 
+              className="w-6 h-[1.5px] bg-white origin-center" 
             />
             <motion.div 
               animate={{ opacity: isMobileMenuOpen ? 0 : 1 }}
-              className="w-4 h-[1.5px] bg-black ml-auto" 
+              className="w-4 h-[1.5px] bg-white ml-auto" 
             />
             <motion.div 
               animate={{ rotate: isMobileMenuOpen ? -45 : 0, y: isMobileMenuOpen ? -7 : 0 }}
-              className="w-6 h-[1.5px] bg-black origin-center" 
+              className="w-6 h-[1.5px] bg-white origin-center" 
             />
           </button>
         </div>
@@ -84,9 +90,11 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 w-full bg-[#f2f2eb] border-b border-black/10 flex flex-col py-8 px-6 md:hidden z-40 space-y-6"
+            className="absolute top-full left-0 w-full bg-[#0D0D0F] border-b border-[#2A2A35] flex flex-col py-8 px-6 md:hidden z-40 space-y-6"
           >
             {[
+              { name: 'About', href: '#about' },
+              { name: 'Demo Projects', href: '#projects' },
               { name: 'Expertise', href: '#expertise' },
               { name: 'Certificates', href: '#certificates' },
               { name: 'Contact', href: '#contact' },
@@ -94,10 +102,10 @@ export default function Header() {
               <a 
                 key={item.name} 
                 href={item.href}
-                className={`text-sm uppercase tracking-[0.2em] transition-colors py-2 border-b border-neutral-300 ${
+                className={`text-sm uppercase tracking-[0.2em] transition-colors py-2 border-b border-[#2A2A35]/60 ${
                   (window.location.hash === item.href) 
-                    ? 'text-red-500 font-semibold' 
-                    : 'text-neutral-700'
+                    ? 'text-[#7B61FF] font-semibold' 
+                    : 'text-[#8C8A99] hover:text-[#F0EEF8]'
                 }`}
               >
                 {item.name}

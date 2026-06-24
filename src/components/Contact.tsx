@@ -5,8 +5,8 @@ export default function Contact() {
     <section className="relative w-full min-h-screen bg-transparent flex flex-col justify-between overflow-hidden" id="contact">
       
       {/* Background large text */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.02]">
-        <span className="font-display font-bold text-[30vw] leading-none whitespace-nowrap">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.01] z-0">
+        <span className="font-display font-bold text-[30vw] leading-none whitespace-nowrap text-[#7B61FF]">
           HELLO
         </span>
       </div>
@@ -19,11 +19,11 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="font-mono text-sm tracking-[0.3em] text-red-500 uppercase mb-4 block">
-            Open for opportunities
+          <span className="font-mono text-xs md:text-sm tracking-[0.3em] text-[#7B61FF] uppercase mb-4 block font-semibold">
+            Open for opportunities & collaborations
           </span>
-          <h2 className="font-display font-bold text-5xl md:text-8xl xl:text-9xl tracking-tighter uppercase leading-[0.9]">
-            Let's build <br/><span className="italic animate-color-blink">The Future</span>
+          <h2 className="font-display font-bold text-5xl md:text-8xl xl:text-9xl text-[#F0EEF8] tracking-tighter uppercase leading-[0.9]">
+            Let's build <br/><span className="italic animate-color-blink text-[#7B61FF]">The Future</span>
           </h2>
         </motion.div>
 
@@ -41,7 +41,7 @@ export default function Contact() {
                 name="name"
                 required
                 placeholder="YOUR NAME" 
-                className="w-full bg-transparent border-b border-neutral-300 py-4 font-sans text-sm focus:outline-none focus:border-black transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
+                className="w-full bg-transparent border-b border-[#2A2A35] py-4 font-sans text-sm text-[#F0EEF8] focus:outline-none focus:border-[#7B61FF] transition-colors uppercase tracking-widest placeholder:text-neutral-600" 
               />
             </div>
             <div className="relative group">
@@ -50,7 +50,7 @@ export default function Contact() {
                 name="email"
                 required
                 placeholder="YOUR EMAIL" 
-                className="w-full bg-transparent border-b border-neutral-300 py-4 font-sans text-sm focus:outline-none focus:border-black transition-colors uppercase tracking-widest placeholder:text-neutral-500" 
+                className="w-full bg-transparent border-b border-[#2A2A35] py-4 font-sans text-sm text-[#F0EEF8] focus:outline-none focus:border-[#7B61FF] transition-colors uppercase tracking-widest placeholder:text-neutral-600" 
               />
             </div>
             <div className="relative group">
@@ -59,17 +59,17 @@ export default function Contact() {
                 required
                 placeholder="PROJECT DETAILS" 
                 rows={4}
-                className="w-full bg-transparent border-b border-neutral-300 py-4 font-sans text-sm focus:outline-none focus:border-black transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-500" 
+                className="w-full bg-transparent border-b border-[#2A2A35] py-4 font-sans text-sm text-[#F0EEF8] focus:outline-none focus:border-[#7B61FF] transition-colors uppercase tracking-widest resize-none placeholder:text-neutral-600" 
               />
             </div>
             
             <button 
               type="submit"
-              className="mt-8 relative overflow-hidden group border border-black/20 py-4 px-8 w-full uppercase tracking-widest font-sans text-sm"
+              className="mt-8 relative overflow-hidden group border border-[#2A2A35] hover:border-[#7B61FF] py-4 px-8 w-full uppercase tracking-widest font-sans text-sm text-white transition-colors duration-300"
               data-cursor="hover"
             >
-              <div className="absolute inset-0 bg-black translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
-              <span className="relative z-10 group-hover:text-black transition-colors duration-500 font-bold">
+              <div className="absolute inset-0 bg-[#7B61FF] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]" />
+              <span className="relative z-10 group-hover:text-white transition-colors duration-500 font-bold">
                 Send Transmission
               </span>
             </button>
@@ -77,13 +77,13 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <footer className="w-full border-t border-neutral-300 py-8 px-6 md:px-12 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-transparent mt-24">
+      <footer className="w-full border-t border-[#2A2A35] py-8 px-6 md:px-12 relative z-10 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#0D0D0F] mt-24">
         <div className="flex flex-col gap-2">
-          <p className="font-sans text-xs tracking-widest uppercase text-neutral-600 text-center md:text-left">
+          <p className="font-sans text-[10px] md:text-xs tracking-widest uppercase text-[#8C8A99] text-center md:text-left">
             © {new Date().getFullYear()} Nafis Ahmed Roktim. All Rights Reserved.
           </p>
-          <p className="font-sans text-xs tracking-widest text-neutral-600 text-center md:text-left">
-            Site created by <a href="http://afrainkabirrafid.ami.bd" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors text-neutral-500 font-medium">Afrain Kabir Rafid</a> (Founder - Rubiecorp)
+          <p className="font-sans text-[10px] md:text-xs tracking-widest text-[#8C8A99] text-center md:text-left">
+            Site created by <a href="http://afrainkabirrafid.ami.bd" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors text-[#7B61FF] font-medium">Afrain Kabir Rafid</a> (Founder - Rubiecorp)
           </p>
         </div>
         <div className="flex items-center gap-6 mt-4 md:mt-0">
@@ -97,7 +97,7 @@ export default function Contact() {
               href={social.url} 
               target={social.url !== '#' ? "_blank" : undefined}
               rel={social.url !== '#' ? "noopener noreferrer" : undefined}
-              className="font-sans text-xs tracking-widest text-neutral-600 hover:text-black transition-colors uppercase"
+              className="font-sans text-xs tracking-widest text-[#8C8A99] hover:text-[#7B61FF] transition-colors uppercase"
               data-cursor="hover"
             >
               {social.name}

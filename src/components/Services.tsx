@@ -1,70 +1,91 @@
 import { motion } from 'motion/react';
+import { Layers, Palette, Terminal, Compass } from 'lucide-react';
 
 const expertises = [
   {
-    title: 'Brand Identity',
-    items: ['Logo Design', 'Rebranding & Brand Refresh', 'Letterhead & Stationery', 'Business Cards']
+    title: 'User Experience Design',
+    icon: Compass,
+    items: ['User Journey Mapping', 'Interactive Wireframes', 'Information Architecture', 'Usability Testing']
   },
   {
-    title: 'Print & Publication',
-    items: ['Editorial Layouts', 'Poster & Flyer Design', 'Packaging Design', 'Print-Ready Assets']
+    title: 'User Interface Design',
+    icon: Layers,
+    items: ['Editorial Typography Scales', 'Responsive Web Layouts', 'Visual Design Systems', 'Frictionless Forms']
   },
   {
-    title: 'Visual Arts',
-    items: ['Graphic Design', 'Flat & Line Art Illustration', 'Social Media Thumbnails (FB, IG, YT)', 'Custom Vectors']
+    title: 'Brand Architecture',
+    icon: Palette,
+    items: ['Logo & Geometry Guidelines', 'Rebranding & Identity Sets', 'Custom Vector Illustrations', 'Luxury Asset Design']
   },
   {
-    title: 'Tool Stack',
-    items: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'CorelDRAW', 'Canva']
+    title: 'Aesthetic Tool Stack',
+    icon: Terminal,
+    items: ['Figma Mastery', 'Adobe Illustrator & InDesign', 'Tailwind CSS & React Integration', 'Motion Physics (Framer)']
   }
 ];
 
 export default function Services() {
   return (
-    <section className="py-24 md:py-48 w-full bg-transparent text-[#111111] border-t border-neutral-300 relative overflow-hidden" id="expertise">
+    <section className="py-24 md:py-36 w-full bg-transparent text-[#F0EEF8] border-t border-[#2A2A35] relative overflow-hidden" id="expertise">
       
       {/* Background typographic element */}
-      <div className="absolute top-0 right-0 opacity-5 pointer-events-none -translate-y-1/4 translate-x-1/4">
-        <span className="font-display font-bold text-[20vw] leading-none uppercase select-none">
-          Skills
+      <div className="absolute top-0 right-0 opacity-[0.02] pointer-events-none -translate-y-1/4 translate-x-1/4">
+        <span className="font-display font-bold text-[20vw] leading-none uppercase select-none text-[#7B61FF]">
+          SKILLS
         </span>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row gap-8 md:justify-between items-start md:items-end mb-24">
-          <h2 className="font-display font-bold text-5xl md:text-7xl uppercase tracking-tighter">
-            Core <br />
-            <span className="text-red-500 italic">Expertise</span>
-          </h2>
-          <p className="font-sans text-neutral-600 max-w-sm text-sm">
-            Fusing tactical application of industry-standard tools with an unrelenting drive for aesthetic perfection.
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-12 h-[1px] bg-[#7B61FF]" />
+              <span className="font-mono text-xs tracking-[0.3em] uppercase text-[#7B61FF]">CAPABILITIES</span>
+            </div>
+            <h2 className="font-display font-bold text-4xl md:text-7xl uppercase tracking-tighter">
+              Core <br />
+              <span className="text-[#7B61FF] italic font-normal">Expertise</span>
+            </h2>
+          </div>
+          <p className="font-sans text-[#8C8A99] max-w-sm text-sm md:text-base leading-relaxed">
+            Fusing strict logical grids and high-fidelity layouts with an relentless drive for visual and emotional impact.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 lg:gap-y-24">
-          {expertises.map((group, index) => (
-            <motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="flex flex-col group"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                 <span className="font-mono text-xs text-red-500">0{index + 1} //</span>
-                 <h3 className="font-display text-2xl uppercase tracking-tight">{group.title}</h3>
-              </div>
-              <div className="w-full h-[1px] bg-neutral-800 mb-6 group-hover:bg-red-500/50 transition-colors duration-500" />
-              <ul className="space-y-4">
-                {group.items.map((item, i) => (
-                  <li key={i} className="font-sans text-neutral-600 flex justify-between items-center group-hover:text-neutral-500 transition-colors">
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+          {expertises.map((group, index) => {
+            const IconComponent = group.icon;
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="flex flex-col group p-8 bg-[#141418] border border-[#2A2A35] hover:border-[#7B61FF] rounded-2xl transition-all duration-300"
+                data-cursor="hover"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4">
+                     <span className="font-mono text-xs text-[#7B61FF]">0{index + 1} //</span>
+                     <h3 className="font-display text-2xl uppercase tracking-tight font-semibold text-white">{group.title}</h3>
+                  </div>
+                  <IconComponent className="w-5 h-5 text-[#8C8A99] group-hover:text-[#7B61FF] transition-colors" />
+                </div>
+                
+                <div className="w-full h-[1px] bg-[#2A2A35] mb-6 group-hover:bg-[#7B61FF]/40 transition-colors duration-500" />
+                
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {group.items.map((item, i) => (
+                    <li key={i} className="font-sans text-sm text-[#8C8A99] flex items-center gap-2 group-hover:text-neutral-200 transition-colors">
+                      <span className="w-1.5 h-1.5 bg-[#2A2A35] group-hover:bg-[#7B61FF] rounded-full transition-colors" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

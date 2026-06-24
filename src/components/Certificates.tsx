@@ -102,22 +102,22 @@ export default function Certificates() {
   const [viewMode, setViewMode] = useState<'scan' | 'twin'>('scan'); // Default to view 'scan' (uploaded physical copy)
 
   return (
-    <section id="certificates" className="py-24 md:py-48 w-full bg-transparent text-[#111111] relative border-t border-neutral-300">
+    <section id="certificates" className="py-24 md:py-36 w-full bg-transparent text-[#F0EEF8] relative border-t border-[#2A2A35]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Section Heading */}
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="w-12 h-[1px] bg-red-500" />
-              <span className="font-sans text-xs tracking-[0.3em] uppercase text-red-500">CREDENTIALS PORTAL</span>
+              <span className="w-12 h-[1px] bg-[#7B61FF]" />
+              <span className="font-sans text-xs tracking-[0.3em] uppercase text-[#7B61FF] font-semibold">CREDENTIALS PORTAL</span>
             </div>
             <h2 className="font-display font-bold text-4xl md:text-6xl uppercase tracking-tighter">
               Verified<br/>
-              <span className="text-neutral-500 italic">Accomplishments</span>
+              <span className="text-[#8C8A99] italic font-normal">Accomplishments</span>
             </h2>
           </div>
-          <p className="font-sans text-neutral-500 text-sm md:text-base leading-relaxed max-w-sm">
+          <p className="font-sans text-[#8C8A99] text-sm md:text-base leading-relaxed max-w-sm">
             Professional licenses, courseworks, and technical achievements matching rigorous industry benchmarks.
           </p>
         </div>
@@ -137,12 +137,12 @@ export default function Certificates() {
                   setSelectedCert(cert);
                   setViewMode('scan'); // Reset panel view to scanned image on open
                 }}
-                className="group relative bg-[#f9f9f6] border border-neutral-300 hover:border-black rounded-2xl flex flex-col h-[480px] cursor-pointer transition-all duration-350 hover:shadow-xl overflow-hidden"
+                className="group relative bg-[#141418] border border-[#2A2A35] hover:border-[#7B61FF] rounded-2xl flex flex-col h-[480px] cursor-pointer transition-all duration-350 overflow-hidden"
                 data-cursor="hover"
               >
                 {/* Physical Certificate Scan Cropped Header */}
-                <div className="relative w-full h-[220px] border-b border-neutral-200 overflow-hidden bg-neutral-100">
-                  <div className="absolute inset-0 bg-[#111111]/5 group-hover:bg-[#111111]/0 transition-all duration-300 z-10 flex items-center justify-center">
+                <div className="relative w-full h-[220px] border-b border-[#2A2A35] overflow-hidden bg-[#1C1C22]">
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-300 z-10 flex items-center justify-center">
                     <span className="opacity-0 group-hover:opacity-100 bg-black/85 text-white font-mono text-[9px] uppercase tracking-widest px-3 py-2 rounded-lg flex items-center gap-1.5 transition-all duration-350 shadow-md">
                       <Eye className="w-3.5 h-3.5" /> View original document
                     </span>
@@ -154,7 +154,7 @@ export default function Certificates() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <span className="font-mono text-[9px] uppercase tracking-wider px-2.5 py-1 bg-white/95 backdrop-blur-sm border border-neutral-200/60 rounded text-black font-semibold shadow-sm">
+                    <span className="font-mono text-[9px] uppercase tracking-wider px-2.5 py-1 bg-[#1C1C22]/95 border border-[#2A2A35]/60 rounded text-[#F0EEF8] font-semibold shadow-sm">
                       {cert.issuer}
                     </span>
                   </div>
@@ -163,10 +163,10 @@ export default function Certificates() {
                 {/* Content Box */}
                 <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
                   <div>
-                    <span className="font-mono text-[9px] tracking-wider text-red-500 uppercase block mb-1">
+                    <span className="font-mono text-[9px] tracking-wider text-[#7B61FF] uppercase block mb-1">
                       {cert.title}
                     </span>
-                    <h3 className="font-display font-medium text-2xl tracking-tight text-black group-hover:text-red-500 transition-colors leading-tight mb-3">
+                    <h3 className="font-display font-medium text-2xl tracking-tight text-white group-hover:text-[#7B61FF] transition-colors leading-tight mb-3">
                       {cert.courseName}
                     </h3>
 
@@ -174,7 +174,7 @@ export default function Certificates() {
                       {cert.skills.slice(0, 3).map((skill) => (
                         <span 
                           key={skill}
-                          className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-white border border-neutral-200 text-neutral-600 rounded"
+                          className="font-mono text-[9px] uppercase tracking-wider px-2 py-0.5 bg-[#1C1C22] border border-[#2A2A35] text-[#8C8A99] rounded"
                         >
                           {skill}
                         </span>
@@ -187,12 +187,12 @@ export default function Certificates() {
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-end border-t border-neutral-200/50 pt-4 mt-4">
-                    <div className="flex items-center gap-1.5 text-neutral-400 font-mono text-[11px]">
+                  <div className="flex justify-between items-end border-t border-[#2A2A35]/60 pt-4 mt-4">
+                    <div className="flex items-center gap-1.5 text-[#8C8A99] font-mono text-[11px]">
                       <Calendar className="w-3.5 h-3.5" />
                       <span>{cert.date}</span>
                     </div>
-                    <div className="flex items-center gap-1 text-xs uppercase tracking-wider font-semibold text-[#111111] group-hover:text-red-500 transition-colors">
+                    <div className="flex items-center gap-1 text-xs uppercase tracking-wider font-semibold text-[#F0EEF8] group-hover:text-[#7B61FF] transition-colors">
                       <span className="font-mono text-[10px]">Verify Detail</span>
                       <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
@@ -204,7 +204,7 @@ export default function Certificates() {
         </div>
 
         {/* Floating background graphic for section */}
-        <div className="absolute right-0 bottom-0 w-96 h-96 bg-red-400/5 rounded-full pointer-events-none blur-3xl z-0" />
+        <div className="absolute right-0 bottom-0 w-96 h-96 bg-[#7B61FF]/5 rounded-full pointer-events-none blur-3xl z-0" />
       </div>
 
       {/* Detail Showcase Immersive Modal */}
@@ -226,25 +226,25 @@ export default function Certificates() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="relative bg-white text-black max-w-[1000px] w-full max-h-[92vh] flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-2xl z-10"
+              className="relative bg-[#0D0D0F] border border-[#2A2A35] text-white max-w-[1000px] w-full max-h-[92vh] flex flex-col md:flex-row rounded-3xl overflow-hidden shadow-2xl z-10"
             >
               {/* Close Button top-right */}
               <button 
                 onClick={() => setSelectedCert(null)}
-                className="absolute right-6 top-6 p-2 z-30 text-neutral-450 hover:text-black bg-neutral-100 md:bg-white hover:bg-neutral-200 rounded-full transition-colors cursor-pointer border border-neutral-200/50"
+                className="absolute right-6 top-6 p-2 z-30 text-[#8C8A99] hover:text-white bg-[#141418] hover:bg-[#1C1C22] rounded-full transition-colors cursor-pointer border border-[#2A2A35]"
               >
                 <X className="w-5 h-5" />
               </button>
 
               {/* Left Column: Original Scanned Image OR Interactive Twin CSS view */}
-              <div className="flex-1 bg-neutral-100 p-6 md:p-12 flex flex-col justify-between relative overflow-x-hidden border-b md:border-b-0 md:border-r border-neutral-200 min-h-[360px] md:min-h-0">
+              <div className="flex-1 bg-[#141418] p-6 md:p-12 flex flex-col justify-between relative overflow-x-hidden border-b md:border-b-0 md:border-r border-[#2A2A35] min-h-[360px] md:min-h-0">
                 
                 {/* Mode Switcher buttons inside Left Column */}
-                <div className="absolute top-4 left-6 z-30 pointer-events-auto flex gap-1 bg-neutral-200/80 p-0.5 rounded-lg border border-neutral-300 shadow-sm">
+                <div className="absolute top-4 left-6 z-30 pointer-events-auto flex gap-1 bg-[#0D0D0F] p-0.5 rounded-lg border border-[#2A2A35] shadow-sm">
                   <button
                     onClick={() => setViewMode('scan')}
                     className={`px-3 py-1 text-[10px] uppercase tracking-wider font-mono rounded-md transition-all ${
-                      viewMode === 'scan' ? 'bg-white text-black shadow-sm font-semibold' : 'text-neutral-500 hover:text-black'
+                      viewMode === 'scan' ? 'bg-[#7B61FF] text-white shadow-sm font-semibold' : 'text-[#8C8A99] hover:text-white'
                     }`}
                   >
                     Original Scan
@@ -252,7 +252,7 @@ export default function Certificates() {
                   <button
                     onClick={() => setViewMode('twin')}
                     className={`px-3 py-1 text-[10px] uppercase tracking-wider font-mono rounded-md transition-all ${
-                      viewMode === 'twin' ? 'bg-white text-black shadow-sm font-semibold' : 'text-neutral-500 hover:text-black'
+                      viewMode === 'twin' ? 'bg-[#7B61FF] text-white shadow-sm font-semibold' : 'text-[#8C8A99] hover:text-white'
                     }`}
                   >
                     Interactive Twin
@@ -461,16 +461,16 @@ export default function Certificates() {
               </div>
 
               {/* Right Column: Complete Verified Details, Skills, Actions */}
-              <div className="w-full md:w-[380px] bg-neutral-900 p-6 md:p-10 flex flex-col justify-between text-white overflow-y-auto">
+              <div className="w-full md:w-[380px] bg-[#0D0D0F] p-6 md:p-10 flex flex-col justify-between text-white overflow-y-auto border-t md:border-t-0 md:border-l border-[#2A2A35]">
                 <div>
-                  <div className="flex items-center gap-2 mb-8 text-[#e64a19]">
+                  <div className="flex items-center gap-2 mb-8 text-[#7B61FF]">
                     <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-                    <span className="font-mono text-xs tracking-widest uppercase font-bold text-stone-200">Verifiable Record</span>
+                    <span className="font-mono text-xs tracking-widest uppercase font-bold text-[#F0EEF8]">Verifiable Record</span>
                   </div>
 
                   <div className="space-y-6">
                     <div>
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#e64a19] block mb-1">ACCREDITED ID</span>
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-[#7B61FF] block mb-1">ACCREDITED ID</span>
                       <p className="font-mono text-xs text-neutral-300 uppercase select-text">
                         ROKTIM-CRT-{selectedCert.id.toUpperCase()}-2026
                       </p>
@@ -520,12 +520,12 @@ export default function Certificates() {
                   </div>
                 </div>
 
-                <div className="mt-10 border-t border-neutral-800 pt-6 space-y-3">
+                <div className="mt-10 border-t border-[#2A2A35] pt-6 space-y-3">
                   <button
                     onClick={() => {
                       window.print();
                     }}
-                    className="w-full bg-white text-black font-semibold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl hover:bg-neutral-200 transition-colors cursor-pointer flex gap-2 items-center justify-center font-mono shadow-md"
+                    className="w-full bg-[#7B61FF] text-white hover:bg-[#9B85FF] font-semibold text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl transition-colors cursor-pointer flex gap-2 items-center justify-center font-mono shadow-md"
                     data-cursor="hover"
                   >
                     <Download className="w-4 h-4" />
@@ -536,7 +536,7 @@ export default function Certificates() {
                       navigator.clipboard.writeText(`Accredited Credential #${selectedCert.id.toUpperCase()}-ROKTIM-2026 issued by ${selectedCert.issuer}`);
                       alert('Credential registration key copied to clipboard!');
                     }}
-                    className="w-full bg-neutral-800 hover:bg-neutral-700 text-neutral-300 text-xs tracking-wider py-3.5 rounded-xl transition-colors font-mono cursor-pointer flex gap-2 items-center justify-center uppercase font-semibold"
+                    className="w-full bg-[#141418] border border-[#2A2A35] hover:border-[#7B61FF] text-[#8C8A99] hover:text-white text-xs tracking-wider py-3.5 rounded-xl transition-colors font-mono cursor-pointer flex gap-2 items-center justify-center uppercase font-semibold"
                     data-cursor="hover"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
